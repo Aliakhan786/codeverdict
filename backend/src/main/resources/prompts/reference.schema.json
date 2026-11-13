@@ -1,0 +1,10 @@
+{
+  "type": "OBJECT",
+  "properties": {
+    "optimalCode": { "type": "STRING" },
+    "bruteForceCode": { "type": "STRING" },
+    "complexity": { "type": "STRING" },
+    "keyIdea": { "type": "STRING" }
+  },
+  "required": ["optimalCode", "bruteForceCode", "complexity", "keyIdea"]
+}

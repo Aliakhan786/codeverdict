@@ -1,0 +1,31 @@
+snippet,problem,has_bug,true_bug_line,bug_type
+01_two_sum_same_element.java,Two Sum,true,4,WRONG_CONDITION
+02_two_sum_reversed_pair.java,Two Sum,true,9,WRONG_RETURN
+03_two_sum_correct.java,Two Sum,false,,
+04_parentheses_pop_empty.java,Valid Parentheses,true,10,MISSING_EMPTY_CHECK
+05_parentheses_leftover_open.java,Valid Parentheses,true,19,WRONG_RETURN
+06_parentheses_correct.java,Valid Parentheses,false,,
+07_binary_search_infinite_loop.java,Binary Search,true,9,INFINITE_LOOP
+08_binary_search_single_element.java,Binary Search,true,4,OFF_BY_ONE
+09_binary_search_correct.java,Binary Search,false,,
+10_max_subarray_zero_start.java,Maximum Subarray,true,3,UNHANDLED_NEGATIVE
+11_max_subarray_skips_last.java,Maximum Subarray,true,5,OFF_BY_ONE
+12_max_subarray_correct.java,Maximum Subarray,false,,
+13_longest_substring_window_jumps_back.java,Longest Substring Without Repeating Characters,true,10,WRONG_CONDITION
+14_longest_substring_length_off_by_one.java,Longest Substring Without Repeating Characters,true,13,OFF_BY_ONE
+15_longest_substring_correct.java,Longest Substring Without Repeating Characters,false,,
+16_container_moves_taller_side.java,Container With Most Water,true,7,WRONG_CONDITION
+17_container_width_off_by_one.java,Container With Most Water,true,5,OFF_BY_ONE
+18_container_correct.java,Container With Most Water,false,,
+19_merge_intervals_not_sorted.java,Merge Intervals,true,5,OTHER
+20_merge_intervals_touching.java,Merge Intervals,true,8,WRONG_CONDITION
+21_merge_intervals_correct.java,Merge Intervals,false,,
+22_group_anagrams_array_identity_key.java,Group Anagrams,true,9,OTHER
+23_group_anagrams_unsorted_key.java,Group Anagrams,true,8,OTHER
+24_group_anagrams_correct.java,Group Anagrams,false,,
+25_islands_never_marks_visited.java,Number of Islands,true,19,INFINITE_LOOP
+26_islands_counts_diagonals.java,Number of Islands,true,24,WRONG_CONDITION
+27_islands_correct.java,Number of Islands,false,,
+28_tree_depth_heap_indexing.java,Maximum Depth of Binary Tree,true,10,OTHER
+29_tree_depth_empty_crash.java,Maximum Depth of Binary Tree,true,5,MISSING_EMPTY_CHECK
+30_tree_depth_correct.java,Maximum Depth of Binary Tree,false,,

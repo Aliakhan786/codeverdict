@@ -1,0 +1,19 @@
+{
+  "type": "OBJECT",
+  "properties": {
+    "inputs": {
+      "type": "ARRAY",
+      "items": {
+        "type": "OBJECT",
+        "properties": {
+          "args": { "type": "STRING" },
+          "edgeCase": { "type": "BOOLEAN" },
+          "description": { "type": "STRING" }
+        },
+        "required": ["args", "edgeCase", "description"]
+      }
+    },
+    "generatorCode": { "type": "STRING" }
+  },
+  "required": ["inputs", "generatorCode"]
+}

@@ -1,0 +1,32 @@
+PROBLEM: {{title}}
+Statement:
+{{statement}}
+
+Required method (inside `class Solution`): {{signature}}
+Sample input (Java arguments): {{sampleInput}}
+Sample output: {{sampleOutput}}
+
+USER CODE (with line numbers):
+{{code}}
+
+CHARGES TO PROVE (JSON):
+{{charges}}
+
+TASK
+For EACH charge write ONE JUnit 5 test class that is "evidence":
+it must FAIL on the user code above if the charge is real, and PASS on ANY correct solution of the problem.
+The test is also run against a trusted reference solution; a test that fails there is thrown out as bad evidence,
+so the expected values must be the true correct answers.
+
+RULES
+- Class name exactly ProofTest_<chargeId> (for chargeId "c1" the class is ProofTest_c1). No package line.
+- Allowed imports only: org.junit.jupiter.api.*, static org.junit.jupiter.api.Assertions.*, java.util.*, java.math.*
+- Call the code as: new Solution().<method>(...)  (Solution is in the default package; create a new instance per call).
+- 1 to 3 @Test methods, each with small concrete inputs that are VALID for the problem statement.
+- Work out each expected value step by step before writing it. Never copy the user's (possibly wrong) logic.
+- If several answers are correct (any order, any valid pair, ...), assert in an order-independent way
+  (for example sort a copy before assertEquals / assertArrayEquals) or check the defining property instead.
+- Crash bugs: call the method and assert the correct result (the exception itself fails the test).
+- Possible infinite loops: just call the method and assert the result; the runner enforces a time limit. No threads.
+- Never test behaviour the statement leaves undefined. No reflection, files, network, System.exit, Thread.
+- Echo each chargeId exactly. Return one entry per charge.

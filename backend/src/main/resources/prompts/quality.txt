@@ -1,0 +1,15 @@
+PROBLEM: {{title}}
+Required method: {{signature}}
+
+USER CODE (with line numbers):
+{{code}}
+
+TASK
+Rate the code quality like a kind but honest senior engineer in a code review. Ignore correctness and speed
+(those are measured separately). Score each area from 0 to 5:
+- naming: are variables and helpers named for what they mean? (5 = self-explanatory, 0 = a, b, x everywhere)
+- readability: easy to follow? sensible line length, clear control flow, no deep nesting
+- structure: logic split sensibly, early returns, no dead code
+- duplication: no copy-pasted logic (5 = none)
+Give one short, specific tip per area (refer to line numbers or names; say "Nothing to improve." if it is a 5).
+estimatedComplexity: the time complexity of THIS code, like "O(n^2)" or "O(n log n)".

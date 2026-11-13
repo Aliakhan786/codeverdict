@@ -1,0 +1,18 @@
+{
+  "type": "OBJECT",
+  "properties": {
+    "fixes": {
+      "type": "ARRAY",
+      "items": {
+        "type": "OBJECT",
+        "properties": {
+          "chargeId": { "type": "STRING" },
+          "fixedCode": { "type": "STRING" },
+          "fixExplanation": { "type": "STRING" }
+        },
+        "required": ["chargeId", "fixedCode", "fixExplanation"]
+      }
+    }
+  },
+  "required": ["fixes"]
+}

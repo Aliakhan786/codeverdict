@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 560" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8a97b2"/>
+    </marker>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2a2410"/>
+      <stop offset="1" stop-color="#1a1608"/>
+    </linearGradient>
+  </defs>
+  <rect width="980" height="560" rx="18" fill="#080d1a"/>
+  <text x="40" y="48" fill="#e7ecf6" font-size="22" font-weight="700" font-family="Georgia, serif">CodeVerdict architecture</text>
+  <text x="40" y="72" fill="#8a97b2" font-size="13">React submits · Spring Boot proves · PostgreSQL remembers</text>
+
+  <!-- React -->
+  <rect x="40" y="110" width="210" height="150" rx="14" fill="#0e1528" stroke="#243150"/>
+  <text x="58" y="138" fill="#e8b84a" font-size="14" font-weight="700">React dashboard</text>
+  <text x="58" y="162" fill="#c9d1e3" font-size="12">Monaco editor + inline markers</text>
+  <text x="58" y="182" fill="#c9d1e3" font-size="12">Verdict reveal, charts, XP</text>
+  <text x="58" y="202" fill="#c9d1e3" font-size="12">TanStack Query, Recharts</text>
+  <text x="58" y="222" fill="#c9d1e3" font-size="12">TypeScript · Tailwind · Vite</text>
+  <text x="58" y="246" fill="#8a97b2" font-size="11">JWT in httpOnly cookie</text>
+
+  <!-- backend frame -->
+  <rect x="300" y="96" width="330" height="440" rx="16" fill="none" stroke="#3a4a72" stroke-dasharray="6 6"/>
+  <text x="318" y="120" fill="#e7ecf6" font-size="13" font-weight="700">Spring Boot 3 · Java 21</text>
+
+  <rect x="320" y="134" width="290" height="70" rx="12" fill="#0e1528" stroke="#243150"/>
+  <text x="336" y="158" fill="#e7ecf6" font-size="13" font-weight="600">REST API + security</text>
+  <text x="336" y="178" fill="#c9d1e3" font-size="12">JWT filter, validation, one error format</text>
+  <text x="336" y="195" fill="#8a97b2" font-size="11">problems · submissions · dashboards · Swagger</text>
+
+  <rect x="320" y="220" width="290" height="70" rx="12" fill="#0e1528" stroke="#243150"/>
+  <text x="336" y="244" fill="#e7ecf6" font-size="13" font-weight="600">Review job (async, 2 workers)</text>
+  <text x="336" y="264" fill="#c9d1e3" font-size="12">returns 202 at once, streams stages</text>
+  <text x="336" y="281" fill="#8a97b2" font-size="11">Server-Sent Events · bounded queue · rate limit</text>
+
+  <rect x="320" y="306" width="290" height="110" rx="12" fill="url(#gold)" stroke="#e8b84a" stroke-width="2"/>
+  <text x="336" y="330" fill="#e8b84a" font-size="14" font-weight="700">Proof Engine</text>
+  <text x="336" y="352" fill="#e7ecf6" font-size="12">AI charge → JUnit test → run twice:</text>
+  <text x="336" y="371" fill="#e7ecf6" font-size="12">fails on yours AND passes on reference</text>
+  <text x="336" y="390" fill="#e7ecf6" font-size="12">= GUILTY. Fix re-tested = ACQUITTED.</text>
+  <text x="336" y="408" fill="#8a97b2" font-size="11">+ hidden tests, benchmark, log-log complexity</text>
+
+  <rect x="320" y="432" width="290" height="88" rx="12" fill="#0e1528" stroke="#243150"/>
+  <text x="336" y="456" fill="#e7ecf6" font-size="13" font-weight="600">Scoring + gamification</text>
+  <text x="336" y="476" fill="#c9d1e3" font-size="12">80% measured, 20% AI-rated</text>
+  <text x="336" y="495" fill="#8a97b2" font-size="11">XP, levels, streaks, badges, mistake stats</text>
+  <text x="336" y="511" fill="#8a97b2" font-size="11">saved in one transaction</text>
+
+  <!-- right side -->
+  <rect x="690" y="134" width="250" height="96" rx="12" fill="#0e1528" stroke="#243150"/>
+  <text x="706" y="158" fill="#e7ecf6" font-size="13" font-weight="600">Gemini API (JSON mode)</text>
+  <text x="706" y="178" fill="#c9d1e3" font-size="12">charges · proof tests · fixes</text>
+  <text x="706" y="196" fill="#c9d1e3" font-size="12">reference + brute force · inputs</text>
+  <text x="706" y="215" fill="#8a97b2" font-size="11">retry/backoff · cache · AiClient interface</text>
+
+  <rect x="690" y="290" width="250" height="110" rx="12" fill="#0e1528" stroke="#243150"/>
+  <text x="706" y="314" fill="#e7ecf6" font-size="13" font-weight="600">Sandbox (CodeRunner)</text>
+  <text x="706" y="334" fill="#c9d1e3" font-size="12">static safety check first</text>
+  <text x="706" y="352" fill="#c9d1e3" font-size="12">Docker: no network, 256 MB,</text>
+  <text x="706" y="370" fill="#c9d1e3" font-size="12">1 CPU, 64 pids, read-only, non-root</text>
+  <text x="706" y="389" fill="#8a97b2" font-size="11">Strategy: local | docker</text>
+
+  <rect x="690" y="432" width="250" height="88" rx="12" fill="#0e1528" stroke="#243150"/>
+  <text x="706" y="456" fill="#e7ecf6" font-size="13" font-weight="600">PostgreSQL 16 + Flyway</text>
+  <text x="706" y="476" fill="#c9d1e3" font-size="12">submissions, reviews, charges,</text>
+  <text x="706" y="494" fill="#c9d1e3" font-size="12">benchmarks, case files, XP, badges</text>
+  <text x="706" y="511" fill="#8a97b2" font-size="11">window functions for dashboards</text>
+
+  <!-- arrows -->
+  <line x1="250" y1="160" x2="318" y2="166" stroke="#8a97b2" stroke-width="1.6" marker-end="url(#arrow)"/>
+  <text x="258" y="150" fill="#8a97b2" font-size="11">HTTPS</text>
+  <path d="M318,262 C280,262 280,240 252,236" fill="none" stroke="#8a97b2" stroke-width="1.6" marker-end="url(#arrow)"/>
+  <text x="150" y="282" fill="#8a97b2" font-size="11">live stages (SSE)</text>
+  <line x1="465" y1="204" x2="465" y2="218" stroke="#8a97b2" stroke-width="1.6" marker-end="url(#arrow)"/>
+  <line x1="465" y1="290" x2="465" y2="304" stroke="#8a97b2" stroke-width="1.6" marker-end="url(#arrow)"/>
+  <line x1="465" y1="416" x2="465" y2="430" stroke="#8a97b2" stroke-width="1.6" marker-end="url(#arrow)"/>
+  <path d="M610,330 C650,330 650,190 688,186" fill="none" stroke="#8a97b2" stroke-width="1.6" marker-end="url(#arrow)"/>
+  <line x1="610" y1="350" x2="688" y2="346" stroke="#8a97b2" stroke-width="1.6" marker-end="url(#arrow)"/>
+  <line x1="610" y1="476" x2="688" y2="476" stroke="#8a97b2" stroke-width="1.6" marker-end="url(#arrow)"/>
+</svg>

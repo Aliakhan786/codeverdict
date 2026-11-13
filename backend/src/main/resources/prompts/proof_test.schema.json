@@ -1,0 +1,17 @@
+{
+  "type": "OBJECT",
+  "properties": {
+    "tests": {
+      "type": "ARRAY",
+      "items": {
+        "type": "OBJECT",
+        "properties": {
+          "chargeId": { "type": "STRING" },
+          "testClassCode": { "type": "STRING" }
+        },
+        "required": ["chargeId", "testClassCode"]
+      }
+    }
+  },
+  "required": ["tests"]
+}

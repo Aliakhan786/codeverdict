@@ -1,0 +1,21 @@
+PROBLEM: {{title}}
+Statement:
+{{statement}}
+
+Required method (inside `class Solution`): {{signature}}
+
+USER CODE (with line numbers):
+{{code}}
+
+These JUnit 5 proof tests did NOT COMPILE. Each entry has the test code and the compiler errors (JSON):
+{{broken}}
+
+TASK
+Return a corrected version of each test that compiles against the code above and keeps the same intent.
+
+RULES
+- Keep the class name ProofTest_<chargeId>. No package line.
+- Allowed imports only: org.junit.jupiter.api.*, static org.junit.jupiter.api.Assertions.*, java.util.*, java.math.*
+- Call the code as new Solution().<method>(...) using the exact parameter and return types of the required method.
+- Expected values must be the true correct answers for the problem.
+- Echo each chargeId exactly.

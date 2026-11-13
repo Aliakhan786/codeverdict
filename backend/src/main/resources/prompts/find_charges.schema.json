@@ -1,0 +1,27 @@
+{
+  "type": "OBJECT",
+  "properties": {
+    "charges": {
+      "type": "ARRAY",
+      "items": {
+        "type": "OBJECT",
+        "properties": {
+          "category": { "type": "STRING", "enum": ["BUG", "EDGE_CASE", "PERFORMANCE", "STYLE"] },
+          "severity": { "type": "STRING", "enum": ["HIGH", "MEDIUM", "LOW"] },
+          "lineStart": { "type": "INTEGER" },
+          "lineEnd": { "type": "INTEGER" },
+          "title": { "type": "STRING" },
+          "explanation": { "type": "STRING" },
+          "mistakeTag": {
+            "type": "STRING",
+            "enum": ["MISSING_NULL_CHECK", "MISSING_EMPTY_CHECK", "OFF_BY_ONE", "INT_OVERFLOW", "WRONG_CONDITION",
+                     "INFINITE_LOOP", "WRONG_RETURN", "UNHANDLED_NEGATIVE", "DUPLICATE_HANDLING",
+                     "INEFFICIENT_ALGORITHM", "OTHER"]
+          }
+        },
+        "required": ["category", "severity", "lineStart", "lineEnd", "title", "explanation", "mistakeTag"]
+      }
+    }
+  },
+  "required": ["charges"]
+}

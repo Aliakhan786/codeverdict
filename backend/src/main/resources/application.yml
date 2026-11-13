@@ -1,0 +1,97 @@
+# CodeVerdict configuration. Every value can be overridden with an environment variable
+# (or a line in the .env file at the repo root, which is loaded automatically).
+spring:
+  application:
+    name: codeverdict
+  config:
+    # KEY=VALUE lines from .env (repo root when started from backend/, or the current folder)
+    import: "optional:file:../.env[.properties],optional:file:.env[.properties]"
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:55433/codeverdict}
+    username: ${DB_USER:codeverdict}
+    password: ${DB_PASSWORD:codeverdict}
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: none              # Flyway owns the schema (see db/migration)
+    properties:
+      hibernate:
+        jdbc:
+          time_zone: UTC
+  flyway:
+    enabled: true
+  mvc:
+    async:
+      request-timeout: 300000     # SSE streams stay open while a review runs
+  jackson:
+    default-property-inclusion: non_null
+
+server:
+  port: ${PORT:18081}
+  compression:
+    enabled: true
+    mime-types: application/json,text/csv
+  error:
+    include-message: never
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+  api-docs:
+    path: /v3/api-docs
+
+logging:
+  level:
+    com.aaliya.codeverdict: INFO
+
+codeverdict:
+  timezone: ${APP_TIMEZONE:Asia/Kolkata}         # "today" for streaks and the heatmap
+  jwt:
+    secret: ${JWT_SECRET:dev-only-secret-change-me-in-production-0123456789abcdef}
+    ttl: ${JWT_TTL:7d}
+    cookie-secure: ${COOKIE_SECURE:false}          # true when served over HTTPS
+  cors:
+    allowed-origins: ${CORS_ORIGINS:http://localhost:5174}
+  auth:
+    registration-enabled: ${REGISTRATION_ENABLED:true}
+  demo:
+    enabled: ${DEMO_ENABLED:true}                  # creates a demo / demo1234 account with sample problems
+    username: demo
+    password: ${DEMO_PASSWORD:demo1234}
+    read-only: ${DEMO_READ_ONLY:false}             # true on a public deployment: demo can look, not submit
+  ai:
+    api-key: ${GEMINI_API_KEY:}
+    model: ${GEMINI_MODEL:gemini-2.5-flash}
+    base-url: ${GEMINI_BASE_URL:https://generativelanguage.googleapis.com/v1beta}
+    timeout: 90s
+    max-attempts: 3
+    thinking-budget: ${GEMINI_THINKING_BUDGET:0}   # 0 = fastest; -1 = let the model decide (slower, deeper)
+    cache-size: 500
+  runner:
+    mode: ${RUNNER_MODE:local}                     # local | docker
+    junit-jar: ${JUNIT_JAR:}                       # empty = auto-detect target/runner-lib/...
+    work-dir: ${RUNNER_WORK_DIR:}                  # empty = <system temp>/codeverdict-jobs
+    keep-workspaces: false
+    docker-image: ${RUNNER_DOCKER_IMAGE:eclipse-temurin:21-jre}
+    memory-mb: 256
+    cpus: 1
+    pids-limit: 64
+    max-output-kb: 64
+    compile-timeout: 10s
+    test-timeout: 5s
+    case-timeout: 2s
+    job-timeout: ${JOB_TIMEOUT:180s}
+    max-charges: 8
+    bench-sizes: 1000,10000,100000
+    bench-limit: 2s
+    bench-warmups: 3
+    bench-runs: 5
+    random-hidden-tests: 10
+    differential-seeds: 50
+  review:
+    max-per-hour: ${MAX_REVIEWS_PER_HOUR:30}
+    worker-threads: 2
+    queue-capacity: 20
+  limits:
+    max-code-chars: 20000
+    max-statement-chars: 10000

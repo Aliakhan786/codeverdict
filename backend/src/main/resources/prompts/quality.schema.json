@@ -1,0 +1,16 @@
+{
+  "type": "OBJECT",
+  "properties": {
+    "naming": { "type": "INTEGER" },
+    "readability": { "type": "INTEGER" },
+    "structure": { "type": "INTEGER" },
+    "duplication": { "type": "INTEGER" },
+    "namingTip": { "type": "STRING" },
+    "readabilityTip": { "type": "STRING" },
+    "structureTip": { "type": "STRING" },
+    "duplicationTip": { "type": "STRING" },
+    "estimatedComplexity": { "type": "STRING" }
+  },
+  "required": ["naming", "readability", "structure", "duplication", "namingTip", "readabilityTip",
+               "structureTip", "duplicationTip", "estimatedComplexity"]
+}

@@ -1,0 +1,37 @@
+PROBLEM: {{title}}
+Statement:
+{{statement}}
+
+Required method (inside `class Solution`): {{signature}}
+Sample input (Java arguments): {{sampleInput}}
+
+TASK
+Design hidden tests for this problem. Write INPUTS ONLY. Expected outputs are computed later by running a
+verified reference solution, so never include outputs.
+
+1. inputs: 8 to 14 test inputs.
+   - args: the arguments as a Java argument list in parameter order, exactly as they would appear inside the call
+     parentheses. Examples: `new int[]{2, 7, 11, 15}, 9`   `"abcabcbb"`   `new int[][]{{1, 3}, {2, 6}}`
+     `new ArrayList<>(List.of(1, 2, 3))`   `new char[]{'a', 'b'}`   `5L`
+   - Every input must be VALID for the statement (respect all constraints and guarantees).
+   - Mix normal cases with edge cases and set edgeCase=true for: smallest allowed size, single element,
+     all equal values, negatives, zeros, duplicates, already sorted / reverse sorted, values near
+     Integer.MAX_VALUE or Integer.MIN_VALUE (only when allowed).
+   - Keep each input small (at most 50 elements) so a human can read it.
+   - description: a few words, e.g. "all negative numbers".
+2. generatorCode: Java code for a static method (plus optional static helpers):
+       static Object[] generate(int n, Random r)
+   It returns the arguments (in parameter order, primitives auto-boxed) of ONE random VALID input of size about n.
+   - n ranges from 1 to 100000. Must run in O(n) or O(n log n) time and use only `r` for randomness.
+   - Respect every constraint and guarantee in the statement (for example "exactly one solution exists" must be
+     constructed, not hoped for). Keep values inside the allowed range and avoid integer overflow.
+   - Use only java.util. No main method, no printing, no class declaration (just the method(s)).
+   Example for `int[] twoSum(int[] nums, int target)`:
+       static Object[] generate(int n, Random r) {
+           int len = Math.max(2, n);
+           int[] a = new int[len];
+           for (int i = 0; i < len; i++) a[i] = 1_000_000 + r.nextInt(1_000_000);
+           int i = r.nextInt(len), j = (i + 1 + r.nextInt(len - 1)) % len;
+           a[i] = r.nextInt(1000); a[j] = r.nextInt(1000);
+           return new Object[]{a, a[i] + a[j]};
+       }

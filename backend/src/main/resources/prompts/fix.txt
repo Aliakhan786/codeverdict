@@ -1,0 +1,23 @@
+PROBLEM: {{title}}
+Statement:
+{{statement}}
+
+Required method (inside `class Solution`): {{signature}}
+
+USER CODE (with line numbers):
+{{code}}
+
+PROVEN CHARGES (a real test failed with the output shown in failingOutput) (JSON):
+{{charges}}
+
+TASK
+For EACH charge return the user's FULL corrected `class Solution` that fixes THAT charge.
+The fix will be verified by re-running the failing test and all hidden tests.
+
+RULES
+- Make the smallest change that fixes the charge. Keep the user's approach, names and style; do not rewrite the
+  algorithm unless the charge is about the algorithm itself.
+- Return the complete compilable class including its imports. Plain `class Solution`, no package line,
+  exact required method signature. Only java.util, java.util.stream, java.util.function and java.math may be used.
+- fixExplanation: one or two sentences, written to the user ("Start best at nums[0] so all-negative arrays work.").
+- Echo each chargeId exactly.

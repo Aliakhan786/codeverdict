@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Courtroom palette: deep navy + gold. Colours are RGB triplets so Tailwind can add opacity. */
+:root,
+.dark {
+  --bg: 8 13 26;
+  --surface: 14 21 40;
+  --raised: 22 32 58;
+  --line: 36 49 80;
+  --fg: 231 236 246;
+  --muted: 138 151 178;
+  --gold: 232 184 74;
+  --guilty: 240 86 86;
+  --acquitted: 52 199 120;
+  --dismissed: 128 139 162;
+  --warn: 245 166 35;
+  --info: 96 165 250;
+  color-scheme: dark;
+}
+
+.light {
+  --bg: 244 246 251;
+  --surface: 255 255 255;
+  --raised: 238 241 247;
+  --line: 219 225 236;
+  --fg: 15 23 42;
+  --muted: 88 100 124;
+  --gold: 176 124 14;
+  --guilty: 210 48 48;
+  --acquitted: 21 148 78;
+  --dismissed: 118 128 150;
+  --warn: 196 118 0;
+  --info: 37 99 235;
+  color-scheme: light;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  @apply bg-bg font-sans text-fg antialiased;
+  background-image:
+    radial-gradient(1200px 600px at 100% -10%, rgb(var(--gold) / 0.06), transparent 60%),
+    radial-gradient(900px 500px at -10% 110%, rgb(var(--info) / 0.05), transparent 60%);
+  background-attachment: fixed;
+}
+
+::selection {
+  background: rgb(var(--gold) / 0.3);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(var(--line)) transparent;
+}
+
+/* Monaco inline markers for proven bugs */
+.cv-guilty-line {
+  background: rgb(var(--guilty) / 0.12);
+}
+.cv-guilty-glyph {
+  background: rgb(var(--guilty));
+  width: 4px !important;
+  margin-left: 4px;
+  border-radius: 2px;
+}
+.cv-acquitted-line {
+  background: rgb(var(--acquitted) / 0.1);
+}
+.cv-acquitted-glyph {
+  background: rgb(var(--acquitted));
+  width: 4px !important;
+  margin-left: 4px;
+  border-radius: 2px;
+}
+
+.font-serif-display {
+  font-family: Georgia, "Times New Roman", serif;
+  letter-spacing: 0.02em;
+}

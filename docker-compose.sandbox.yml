@@ -1,0 +1,18 @@
+# Production-style sandbox: every code run happens in a fresh container with no network,
+# 256 MB RAM, 1 CPU, 64 processes max, read-only filesystem, non-root user.
+#   docker compose -f docker-compose.yml -f docker-compose.sandbox.yml up --build
+# (Linux host / VM. The job folder must have the same path inside and outside the backend
+#  container, because the Docker daemon resolves -v paths on the host.)
+services:
+  backend:
+    user: root                       # needs access to the Docker socket
+    environment:
+      RUNNER_MODE: docker
+      RUNNER_DOCKER_IMAGE: eclipse-temurin:21-jre
+      RUNNER_WORK_DIR: /tmp/codeverdict-jobs
+      DEMO_READ_ONLY: "true"
+      REGISTRATION_ENABLED: "false"
+      COOKIE_SECURE: "true"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /tmp/codeverdict-jobs:/tmp/codeverdict-jobs

@@ -1,0 +1,25 @@
+PROBLEM: {{title}}
+Topic: {{topic}}
+Statement:
+{{statement}}
+
+Required method (inside `class Solution`): {{signature}}
+Sample input (Java arguments): {{sampleInput}}
+Sample output: {{sampleOutput}}
+
+TASK
+Write two complete, correct Java solutions. They will be cross-checked against each other on many random inputs
+and against the sample, so correctness matters more than anything else.
+{{retryNote}}
+
+1. optimalCode: the best known time complexity, clean and idiomatic.
+2. bruteForceCode: the simplest obviously-correct approach (for example try every possibility). It may be slow;
+   it only has to be right on small inputs. Use a genuinely different method from the optimal one.
+
+RULES (both solutions)
+- A complete `class Solution` with exactly this method: {{signature}}
+- No package line. No main method. No printing.
+- Only java.util, java.util.stream, java.util.function and java.math. No threads, reflection, files or network.
+- Handle every valid input from the statement, including the smallest ones.
+- complexity: time complexity of the optimal solution, like "O(n)" or "O(n log n)".
+- keyIdea: one or two sentences with the insight that makes the optimal solution fast, written for a learner.

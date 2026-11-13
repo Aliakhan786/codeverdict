@@ -1,0 +1,8 @@
+# Caddy reverse proxy on the VM: automatic HTTPS for your domain (e.g. a free DuckDNS name).
+# Replace codeverdict.example.duckdns.org with your domain.
+codeverdict.example.duckdns.org {
+    encode gzip
+    reverse_proxy localhost:3000 {
+        flush_interval -1   # stream Server-Sent Events immediately
+    }
+}
